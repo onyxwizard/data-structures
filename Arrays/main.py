@@ -5,13 +5,13 @@ from Updation.update import ArrayUpdation
 from Access.access import ArrayAccess
 from Search.search import ArraySearch
 from Traversal.traversal import ArrayTraversal
-from Sort.sort import ArraySort  # Import the new ArraySort class
-
+from Sorting.sort import ArraySort  # Import the new ArraySort class
+import random
 def main():
     print("--- Welcome to Array Operations ---")
     
     # Default array in case the user skips creation
-    default_array = list(range(1, 10))  # Default array: [1, 2, 3, ..., 9]
+    default_array = [23, 89, 45, 12, 67]  # Default array: [1, 2, 3, ..., 9]
     array = None  # Initialize as None
     
     while True:
