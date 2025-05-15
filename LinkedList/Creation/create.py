@@ -11,6 +11,13 @@ class Node:
         while current is not None:
             print(current.data)
             current = current.next  # Move to next node
+    
+    def search_element(self,key):
+        curr = self
+        while curr is not None:
+            if curr.data == key:
+                return True
+            curr = curr.next
         
 # Traverse from head
 def main():
@@ -20,6 +27,9 @@ def main():
     head.next.next.next = Node(10)
     
     head.traverse()
+    
+    # Find the Element
+    print(head.search_element(key=30))
     
 
 if __name__ == "__main__":
