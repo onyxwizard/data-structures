@@ -93,6 +93,16 @@ class Node:
         
         cur.next = cur.next.next
         return self
+
+    def reverse_pointers(self):
+        prev = None
+        curr = self
+        while curr is not None:
+            next_node = curr.next  # Save next node before breaking link
+            curr.next = prev       # Reverse link
+            prev = curr            # Move prev forward
+            curr = next_node       # Move curr forward
+        return prev  # prev is now the new head
     
 def main():
     head = Node(40)
@@ -142,6 +152,11 @@ def main():
     print("\n Delete node at Specific Position")
     pos = 2
     head = head.delete_node_pos(pos)
+    head.traverse()
+    
+    # Reverse from head
+    print(f"\n Reverse the Linked List using Pointers")
+    head = head.reverse_pointers()
     head.traverse()
         
 if __name__ == "__main__":
